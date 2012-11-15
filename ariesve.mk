@@ -35,7 +35,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
 # Feature live wallpaper
 PRODUCT_COPY_FILES += \
@@ -53,7 +52,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/vold.fstab:system/etc/vold.fstab \
     $(LOCAL_PATH)/config/nvram_net.txt:system/vendor/firmware/nvram_net.txt \
     $(LOCAL_PATH)/recovery/fix_reboot.sh:recovery/root/sbin/fix_reboot.sh \
-    $(LOCAL_PATH)/prebuilt/FileManager.apk:system/app/FileManager.apk \
     $(LOCAL_PATH)/prebuilt/get_macaddrs:system/bin/get_macaddrs
 
 # Input device calibration files
@@ -110,18 +108,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm7x30 \
-    audio_policy.msm7x30 
+    audio_policy.msm7x30 \
+    audio_policy.conf 
 
     
 #GRALLOC
 PRODUCT_PACKAGES += \
-	copybit.msm7x30 \
+    copybit.msm7x30 \
     gralloc.msm7x30 \
-    hwcomposer.msm7x30 \
-    libgenlock \
-    libmemalloc \
-    liboverlay \
-    libtilerenderer
+    hwcomposer.msm7x30
     
 #HAL
 PRODUCT_PACKAGES += \
@@ -135,7 +130,8 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libdivxdrmdecrypt \
     libOmxVdec \
-    libstagefrighthw 
+    libstagefrighthw \
+    libI420colorconvert
 
 PRODUCT_PACKAGES += \
     badblocks \
