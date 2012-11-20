@@ -123,6 +123,8 @@ BOARD_VOLD_MAX_PARTITIONS := 28
 
 BOARD_MTP_DEVICE := "/dev/usb_mtp_gadget"
 
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun%d/file
+
 # Begin recovery stuff
 #
 # Partition sizes must match your phone.
