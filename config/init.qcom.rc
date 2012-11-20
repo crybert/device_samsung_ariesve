@@ -161,6 +161,9 @@ on boot
     chown radio system sys/devices/platform/android_usb/tethering
     chown radio system sys/devices/platform/android_usb/UsbMenuSel
     chown radio system sys/devices/virtual/graphics/fb1/hpd
+    chown system system sys/class/misc/notification/led
+    chown system system sys/class/misc/notification/bl_timeout
+    chown system system sys/class/misc/notification/wakelock
 
     # for silent reset
     chown system system /proc/dump_enable
@@ -184,7 +187,7 @@ on emmc-fs
     chmod 0666 /dev/block/mmcblk0p14
 
     mount_all fstab.qcom
-	
+
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 
 on post-fs-data
