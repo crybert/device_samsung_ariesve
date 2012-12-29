@@ -1,4 +1,4 @@
-device_samsung_ariesve
+slim_device_samsung_ariesve
 ======================
 
-ariesve device folder for AOKP JellyBean
+ariesve device folder for SlimBean

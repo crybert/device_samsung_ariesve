@@ -6,14 +6,15 @@ rild.libargs=-d /dev/smd0
 
 ro.ril.hsxpa=1
 ro.ril.gprsclass=10
-ro.telephony.ril_class=SamsungMSMRIL
+ro.telephony.ril_class=SamsungRIL
+ro.telephony.ril.v3=datacall,icccardstatus
 
 # Wifi interface device
 wifi.interface=wlan0
 
 # Density in DPI of the LCD of this board. This is used to scale the UI
 # appropriately. If this property is not defined, the default value is 160 dpi.
-ro.sf.lcd_density=240
+ro.sf.lcd_density=182
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number.
@@ -30,9 +31,11 @@ ro.zram.default=0
 
 # QCOM
 com.qc.hardware=true
+com.qc.hdmi_out=false
 debug.sf.hw=1
 debug.egl.hw=1
 debug.enabletr=true
+ro.sf.compbypass.enable=1
 
 # QCOM CpuGovernorService
 dev.pm.dyn_samplingrate=1
